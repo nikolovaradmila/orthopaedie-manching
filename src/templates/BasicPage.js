@@ -8,17 +8,25 @@ import Box from "@material-ui/core/Box"
 import Container from "@material-ui/core/Container"
 import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/core/styles"
-import { red } from "@material-ui/core/colors"
+import { red, green } from "@material-ui/core/colors"
 import { withStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
+import { useTheme } from "@material-ui/styles"
 
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
-    backgroundColor: red,
+    background: "red",
+    padding: 5,
+    color: "green",
   },
   input: {
     display: "none",
+  },
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }))
 
@@ -35,9 +43,11 @@ const MainBanner = styled.div`
 `
 
 function BasicPage(props) {
+  const classes = useStyles()
+  const theme = useTheme()
   return (
     <Layout>
-      <MainBanner>
+      <MainBanner className={classes.root}>
         <Typography
           variant="h2"
           gutterBottom={true}
@@ -52,6 +62,9 @@ function BasicPage(props) {
           props.data.contentfulBasicPage.bodyText.json
         )}
       </div>
+      <Button variant="contained" className={classes.button}>
+        Button Text
+      </Button>
     </Layout>
   )
 }
