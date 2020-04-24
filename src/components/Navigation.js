@@ -7,7 +7,7 @@ const Navbar = styled.nav`
   top: 0;
   border-bottom: 1px solid #e7e7e7;
   z-index: 5;
-  positon: relative;
+  position: relative;
 `
 
 function Navigation() {

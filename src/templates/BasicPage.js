@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const MainBanner = styled.div`
-  min-height: 400px !important;
+  min-height: 30vh !important;
   width: 100% !important;
   background-color: #f8f8f8;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -39,11 +39,13 @@ const MainBanner = styled.div`
 
   z-index: 1;
   top: 0;
-  let: 0;
+  left: 0;
 `
 
 function BasicPage(props) {
   const classes = useStyles()
+  console.log(props)
+
   const theme = useTheme()
   return (
     <Layout>
@@ -54,7 +56,7 @@ function BasicPage(props) {
           align="center"
           color="primary"
         >
-          {props.data.contentfulBasicPage.title}
+          {props.data.contentfulBasicPage.title || null}
         </Typography>
       </MainBanner>
       <div>
