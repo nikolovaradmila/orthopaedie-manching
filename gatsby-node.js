@@ -4,23 +4,23 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allContentfulBasicPage {
+      allContentfulBasicContentPage {
         edges {
           node {
             id
-            node_locale
-            slug
-            title
-            bodyText {
+            pageTitle
+            textContent {
               json
             }
+            slug
+            node_locale
           }
         }
       }
     }
   `).then(result => {
     // Object.values(result.data).reduce((acc,value)=>[...acc,...value.edges],[])
-    result.data.allContentfulBasicPage.edges.forEach(({ node }) => {
+    result.data.allContentfulBasicContentPage.edges.forEach(({ node }) => {
       createPage({
         path: `${node.slug}`,
         component: path.resolve(`./src/templates/BasicPage.js`),

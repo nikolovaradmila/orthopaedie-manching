@@ -56,12 +56,12 @@ function BasicPage(props) {
           align="center"
           color="primary"
         >
-          {props.data.contentfulBasicPage.title || null}
+          {props.data.contentfulBasicContentPage.pageTitle || null}
         </Typography>
       </MainBanner>
       <div>
         {documentToReactComponents(
-          props.data.contentfulBasicPage.bodyText.json
+          props.data.contentfulBasicContentPage.textContent.json
         )}
       </div>
       <Button variant="contained" className={classes.button}>
@@ -73,12 +73,12 @@ function BasicPage(props) {
 
 export const query = graphql`
   query($id: String!) {
-    contentfulBasicPage(id: { eq: $id }) {
+    contentfulBasicContentPage(id: { eq: $id }) {
       id
       node_locale
       slug
-      title
-      bodyText {
+      pageTitle
+      textContent {
         json
       }
     }
