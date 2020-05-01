@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import GlobalStyles from "../GlobalStyles"
 import Header from "../components/Header"
 import "./layout.css"
 
@@ -18,10 +18,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <main>
-        <Header />
-        {children}
-      </main>
+      <GlobalStyles />
+      <Header />
+      <main>{children}</main>
     </>
   )
 }

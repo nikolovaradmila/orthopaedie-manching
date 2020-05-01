@@ -6,12 +6,10 @@ const LogoOuterContainer = styled.div`
   height: 70px;
   width: 70px;
   background-color: #333333;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  transform: rotate(-8deg);
+
   z-index: 1;
 `
 
@@ -22,8 +20,7 @@ const LogoInnerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transform: rotate(-8deg);
+  padding: 5px;
   z-index: 2;
 `
 
@@ -31,7 +28,6 @@ const LogoIcon = styled.img`
   height: 55px;
   width: 55px;
   margin: 0;
-  transform: rotate(16deg);
 `
 
 const getLogo = graphql`

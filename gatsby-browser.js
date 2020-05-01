@@ -1,5 +1,3 @@
-import CssBaseline from "@material-ui/core/CssBaseline"
-import { ThemeProvider } from "@material-ui/styles"
 import Layout from "./src/components/layout"
 import { PageContextProvider } from "./src/components/PageContext"
 import React from "react"
@@ -10,10 +8,10 @@ import theme from "./src/theme"
 
 export const wrapRootElement = ({ element }) => (
   <StyledThemeProvider theme={theme}>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {element}
-    </ThemeProvider>
+    {/*   <ThemeProvider theme={theme}> */}
+    {/*  <CssBaseline /> */}
+    {element}
+    {/* </ThemeProvider> */}
   </StyledThemeProvider>
 )
 
