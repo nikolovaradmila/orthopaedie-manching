@@ -18,10 +18,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-
-      {/*  <main>{children}</main> */}
-      <div>this is another component</div>
+      <main>
+        <Header />
+        {children}
+      </main>
     </>
   )
 }

@@ -1,7 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import BasicPage from "../templates/BasicPage"
+import Hero from "../components/Hero"
 
-const IndexPage = () => <Layout>{/* <BasicPage></BasicPage> */}</Layout>
+const IndexPage = () => (
+  <Layout>
+    <Hero></Hero>
+  </Layout>
+)
 
 export default IndexPage
