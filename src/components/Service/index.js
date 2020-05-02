@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
 
 const ServiceCard = styled.div`
   height: 30rem;
-  width: 30rem;
+  width: 27rem;
+  margin: 1rem;
   border: 2px solid orange;
 `
 
