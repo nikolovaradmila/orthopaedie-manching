@@ -2,18 +2,22 @@ import { createGlobalStyle } from "styled-components"
 /* import { setColor, setFont } from "../../styles" */
 const Globals = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Courgette|Lato:400,700');
-*{
- margin:0;
- padding:0;
- box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
 }
-
-html {
+html { 
  font-size: 62.5%;
 }
 body{
- background-color: red;
- font-family: Lato
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
  
 }
 /* h1{

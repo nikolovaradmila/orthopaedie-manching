@@ -4,7 +4,7 @@ import styled from "styled-components"
 const Div = styled.div`
   font-size: 2rem;
   margin: 1rem;
-  background: ${({ theme }) => theme.palette.mainBlue};
+ /*  background: ${({ theme }) => theme.palette.mainBlue}; */
 `
 
 function Navigation() {

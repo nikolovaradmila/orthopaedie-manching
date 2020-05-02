@@ -4,9 +4,7 @@ import Navigation from "../Navigation"
 import Logo from "../Logo"
 
 const HeaderContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
