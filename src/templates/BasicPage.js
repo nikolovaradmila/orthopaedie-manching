@@ -38,7 +38,6 @@ const MainBanner = styled.div`
 
 function BasicPage(props) {
   const classes = useStyles()
-  console.log(props)
 
   const theme = useTheme()
   return (
