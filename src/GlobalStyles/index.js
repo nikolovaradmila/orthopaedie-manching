@@ -29,15 +29,20 @@ p{
 }
 
  h1{
- font-size:3.5rem;
+ font-size:4.5rem;
  line-height:1.2;
  letter-spacing: 2px;
- margin-bottom:0.5rem
+ margin-bottom:0.5rem;
 }
-/*
+
 h2{
- font-size:2em;margin-bottom:0.75em
+ font-size:2.5rem;
+ line-height:1.2;
+ letter-spacing: 2px;
+ margin-bottom:0.5rem;
 }
+
+/*
 h3{
  font-size:1.5em;line-height:1;margin-bottom:1em
 }
