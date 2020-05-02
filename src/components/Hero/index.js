@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import { Button } from "../Button"
 
 const HeroContainer = styled.div`
   position: relative;
@@ -57,6 +58,7 @@ function Hero() {
       <TextContent>
         <h1>{data.contentfulHeroComponent.title}</h1>
         <p>{data.contentfulHeroComponent.subtitle}</p>
+        <Button>{data.contentfulHeroComponent.buttonText}</Button>
       </TextContent>
     </>
   )

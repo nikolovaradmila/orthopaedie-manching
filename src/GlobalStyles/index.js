@@ -40,7 +40,9 @@ h2{
  font-size:2.5rem;
  line-height:1.2;
  letter-spacing: 2px;
- margin-bottom:0.5rem;
+ margin-bottom: 2rem;
+ color: ${({ theme }) => theme.palette.secondaryOrange};
+
 }
 
 /*
