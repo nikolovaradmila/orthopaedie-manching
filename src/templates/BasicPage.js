@@ -1,15 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-import Box from "@material-ui/core/Box"
-import Container from "@material-ui/core/Container"
 import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/core/styles"
-import { red, green } from "@material-ui/core/colors"
-import { withStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import { useTheme } from "@material-ui/styles"
 
@@ -48,7 +42,7 @@ function BasicPage(props) {
 
   const theme = useTheme()
   return (
-    <Layout>
+    <>
       <MainBanner className={classes.root}>
         <Typography
           variant="h2"
@@ -67,7 +61,7 @@ function BasicPage(props) {
       <Button variant="contained" className={classes.button}>
         Button Text
       </Button>
-    </Layout>
+    </>
   )
 }
 

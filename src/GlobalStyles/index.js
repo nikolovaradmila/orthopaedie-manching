@@ -18,11 +18,23 @@ body{
 
     font-family: 'Josefin Sans', sans-serif;
     font-weight: normal;
+    
  
 }
-/* h1{
- font-size:3em;line-height:1.2;margin-bottom:0.5em
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
 }
+
+ h1{
+ font-size:3.5rem;
+ line-height:1.2;
+ letter-spacing: 2px;
+ margin-bottom:0.5rem
+}
+/*
 h2{
  font-size:2em;margin-bottom:0.75em
 }

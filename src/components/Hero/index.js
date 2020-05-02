@@ -19,6 +19,17 @@ const Cover = styled.div`
   opacity: 0.6;
 `
 
+const TextContent = styled.div`
+  position: absolute;
+  max-width: 60%;
+  top: 50%;
+  left: 10px;
+  color: white;
+
+  h1 {
+  }
+`
+
 const getHeroComponentContent = graphql`
   {
     contentfulHeroComponent {
@@ -28,6 +39,7 @@ const getHeroComponentContent = graphql`
         }
         title
       }
+      title
       subtitle
       buttonText
     }
@@ -42,6 +54,10 @@ function Hero() {
         background={data.contentfulHeroComponent.mainBannerImage.file.url}
       ></HeroContainer>
       <Cover></Cover>
+      <TextContent>
+        <h1>{data.contentfulHeroComponent.title}</h1>
+        <p>{data.contentfulHeroComponent.subtitle}</p>
+      </TextContent>
     </>
   )
 }
