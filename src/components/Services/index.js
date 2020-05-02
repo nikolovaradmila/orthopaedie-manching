@@ -10,6 +10,7 @@ const ServicesSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 
   div {
     display: flex;
@@ -28,6 +29,11 @@ const getServicesContent = graphql`
       edges {
         node {
           serviceName
+          coverPhoto {
+            file {
+              url
+            }
+          }
           slug
           id
         }

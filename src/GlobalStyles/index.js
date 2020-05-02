@@ -45,10 +45,15 @@ h2{
 
 }
 
-/*
+
 h3{
- font-size:1.5em;line-height:1;margin-bottom:1em
+ font-size:2rem;
+ line-height:1;
+ margin-bottom:1em;
+ color: ${({ theme }) => theme.palette.mainOrange};
+ letter-spacing: 1.2px;
 }
+/*
 h4{
  font-size:1.2em;line-height:1.2;margin-bottom:1.25em;font-weight:bold;
 }
