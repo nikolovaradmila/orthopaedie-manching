@@ -18,6 +18,7 @@ body{
 
     font-family: 'Josefin Sans', sans-serif;
     font-weight: normal;
+    color: ${({ theme }) => theme.palette.darkGrey};
     
  
 }

@@ -1,7 +1,7 @@
 export default {
   palette: {
     mainOrange: "#F67E33",
-    darkBlue: "#000CBA",
+    darkGrey: "#777",
     mainRed: "#F30704",
     mainYellow: "#FBCB2E",
     mainGreen: "#B0C92D",
