@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import { Link } from "gatsby"
 const ServiceCard = styled.div`
   position: relative;
   height: 30rem;
@@ -25,9 +25,11 @@ const ServiceCard = styled.div`
 function Service({ service }) {
   const { id, serviceName, slug, coverPhoto } = service
   return (
-    <ServiceCard background={coverPhoto.file.url}>
-      <h3>{serviceName}</h3>
-    </ServiceCard>
+    <Link to={slug}>
+      <ServiceCard background={coverPhoto.file.url}>
+        <h3>{serviceName}</h3>
+      </ServiceCard>
+    </Link>
   )
 }
 

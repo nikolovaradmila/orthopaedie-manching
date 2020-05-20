@@ -2,9 +2,31 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 
-const diagnostikPageData = graphql`
-  {
-    contentfulService(serviceName: { eq: "Diagnostik" }) {
+function Diagnostik(props) {
+  console.log(props)
+
+  return (
+    <>
+      <h1>{props.data.contentfulService.serviceName}</h1>
+      <div>
+        <img src={props.data.contentfulService.coverPhoto.file.url} />
+      </div>
+      <div>
+        {props.data.contentfulService.categories.map(function(category) {
+          return (
+            <Link to={category.slug} key={category.id}>
+              {category.categoryName}
+            </Link>
+          )
+        })}
+      </div>
+    </>
+  )
+}
+
+export const query = graphql`
+  query($id: String!) {
+    contentfulService(id: { eq: $id }) {
       id
       node_locale
       serviceDescription {
@@ -39,23 +61,5 @@ const diagnostikPageData = graphql`
     }
   }
 `
-
-function Diagnostik() {
-  const data = useStaticQuery(diagnostikPageData)
-  console.log(data)
-  return (
-    <>
-      <h1>{data.contentfulService.serviceName}</h1>
-      <div>
-        <img src={data.contentfulService.coverPhoto.file.url} />
-      </div>
-      <div>
-        {data.contentfulService.categories.map(function(category) {
-          return <Link to={category.slug}>{category.categoryName}</Link>
-        })}
-      </div>
-    </>
-  )
-}
 
 export default Diagnostik

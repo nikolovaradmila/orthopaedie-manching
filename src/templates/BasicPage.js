@@ -19,6 +19,8 @@ const MainBanner = styled.div`
 `
 
 function BasicPage(props) {
+  console.log(props)
+
   return (
     <>
       <MainBanner>
