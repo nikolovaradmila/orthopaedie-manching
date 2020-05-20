@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, useStaticQuery } from "gatsby"
 import Service from "../Service"
+import { Link } from "gatsby"
 
 const ServicesSection = styled.section`
   display: flex;
@@ -44,11 +45,12 @@ const getServicesContent = graphql`
 
 function Services() {
   const data = useStaticQuery(getServicesContent)
+  console.log(data)
+
   return (
     <ServicesSection>
       <h1>{data.contentfulLeistungsubersicht.title}</h1>
       <p>
-        {" "}
         {documentToReactComponents(
           data.contentfulLeistungsubersicht.introText.json
         )}
