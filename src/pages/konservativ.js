@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 
 const konservativPageData = graphql`
@@ -42,9 +42,23 @@ const konservativPageData = graphql`
 
 function Konservativ() {
   const data = useStaticQuery(konservativPageData)
-  console.log(data)
+  /*  console.log(data.contentfulService)
 
-  return <div></div>
+  const { id, serviceName } = data.contentfulService */
+
+  return (
+    <>
+      <h1>{data.contentfulService.serviceName}</h1>
+      <div>
+        <img src={data.contentfulService.coverPhoto.file.url} />
+      </div>
+      <div>
+        {data.contentfulService.categories.map(function(category) {
+          return <Link to={category.slug}>{category.categoryName}</Link>
+        })}
+      </div>
+    </>
+  )
 }
 
 export default Konservativ
