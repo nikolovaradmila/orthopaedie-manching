@@ -61,6 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             id
             slug
+            node_locale
             title
             textContent {
               json
@@ -87,6 +88,18 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `${node.slug}`,
         component: path.resolve(`./src/templates/servicePage.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          id: node.id,
+          locale: node.node_locale,
+        },
+      })
+    })
+    result.data.allContentfulEvent.edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.slug}`,
+        component: path.resolve(`./src/templates/eventPage.js`),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
