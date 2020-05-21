@@ -55,6 +55,19 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+      allContentfulEvent {
+        edges {
+          node {
+            id
+            slug
+            title
+            textContent {
+              json
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     // Object.values(result.data).reduce((acc,value)=>[...acc,...value.edges],[])
