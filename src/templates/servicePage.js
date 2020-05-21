@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 function Diagnostik(props) {
   console.log(props)
