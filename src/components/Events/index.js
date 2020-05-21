@@ -4,7 +4,7 @@ import Event from "../Event"
 
 const getEvents = graphql`
   {
-    allContentfulEvent(sort: { fields: date, order: DESC }) {
+    allContentfulEvent(sort: { fields: date, order: DESC }, limit: 4) {
       edges {
         node {
           date(formatString: "DD. MM. YYYY")
