@@ -15,6 +15,7 @@ const SprechzeitenPageData = graphql`
 `
 
 function Sprechzeiten() {
+  const data = useStaticQuery(SprechzeitenPageData)
   return <div></div>
 }
 
