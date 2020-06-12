@@ -1,26 +1,62 @@
 import React from "react"
+import styled from "styled-components"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
-function Diagnostik(props) {
-  console.log(props)
+const Container = styled.section`
+  display: flex;
+`
 
+const ImageContainer = styled.div`
+  border: 2px solid blue;
+  flex: 1;
+`
+const ServicesContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+`
+const ServiceCategory = styled.div`
+  /*  border: 1px solid orangered; */
+  background-color: gray;
+  width: 100%;
+  height: 70px;
+  margin: 3px 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: white;
+    text-align: center;
+  }
+`
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`
+function Diagnostik(props) {
   return (
-    <>
-      <h1>{props.data.contentfulService.serviceName}</h1>
-      <div>
+    <Container>
+      {/*  <h1>{props.data.contentfulService.serviceName}</h1> */}
+      <ImageContainer>
         <img src={props.data.contentfulService.coverPhoto.file.url} />
-      </div>
-      <div>
+      </ImageContainer>
+      <ServicesContainer>
         {props.data.contentfulService.categories.map(function(category) {
           return (
-            <Link to={category.slug} key={category.id}>
-              {category.categoryName}
-            </Link>
+            <StyledLink to={category.slug} key={category.id}>
+              <ServiceCategory>
+                <p>{category.categoryName}</p>
+              </ServiceCategory>
+            </StyledLink>
           )
         })}
-      </div>
-    </>
+      </ServicesContainer>
+    </Container>
   )
 }
 
