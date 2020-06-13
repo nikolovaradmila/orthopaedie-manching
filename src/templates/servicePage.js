@@ -10,6 +10,7 @@ const Container = styled.section`
 const ImageContainer = styled.div`
   border: 2px solid blue;
   flex: 1;
+  max-width: 50%;
 `
 const ServicesContainer = styled.div`
   flex: 1;
