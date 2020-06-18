@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import DoctorCard from "./DoctorCard"
+import DoctorCard from "../DoctorCard"
 
 export const query = graphql`
   {
