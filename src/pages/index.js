@@ -5,6 +5,7 @@ import Services from "../components/Services"
 import Events from "../components/Events"
 import BookTerminOnline from "../components/BookTerminOnline"
 import ContactSection from "../components/ContactSection"
+import DoctorsTeam from "../components/DoctorsTeam"
 
 const IndexPage = () => (
   <>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <Services></Services>
     <BookTerminOnline></BookTerminOnline>
     <ContactSection></ContactSection>
+    <DoctorsTeam />
     <Events />
   </>
 )
