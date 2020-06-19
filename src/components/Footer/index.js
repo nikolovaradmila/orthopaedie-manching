@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import FooterSubline from "../FooterSubline"
 
 const StyledFooter = styled.footer`
   border: 2px solid gray;
@@ -7,7 +8,11 @@ const StyledFooter = styled.footer`
 `
 
 function Footer() {
-  return <StyledFooter></StyledFooter>
+  return (
+    <StyledFooter>
+      <FooterSubline></FooterSubline>
+    </StyledFooter>
+  )
 }
 
 export default Footer
