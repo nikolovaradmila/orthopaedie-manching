@@ -4,6 +4,7 @@ import FooterSubline from "../FooterSubline"
 
 const StyledFooter = styled.footer`
   border: 2px solid gray;
+  border: 2px solid red;
   padding: 60px;
 `
 
