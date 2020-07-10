@@ -11,8 +11,9 @@ const IndexPage = () => (
   <>
     <Hero></Hero>
     <Intro></Intro>
-    <Services></Services>
     <BookTerminOnline></BookTerminOnline>
+    <Services></Services>
+
     <ContactSection></ContactSection>
     <DoctorsTeam />
     <Events />
