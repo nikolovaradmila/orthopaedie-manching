@@ -45,5 +45,20 @@ module.exports = {
         accessToken: "95AhLvoHBtTTgz_6Yg_b2WnP56Kw7kqtNQo19dxaU80",
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
   ],
 }
