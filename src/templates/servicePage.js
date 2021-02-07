@@ -40,6 +40,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 function Diagnostik(props) {
+  console.log(props.data.contentfulService.categories)
   return (
     <Container>
       {/*  <h1>{props.data.contentfulService.serviceName}</h1> */}
@@ -47,15 +48,17 @@ function Diagnostik(props) {
         <img src={props.data.contentfulService.coverPhoto.file.url} />
       </ImageContainer>
       <ServicesContainer>
-        {props.data.contentfulService.categories.map(function(category) {
-          return (
-            <StyledLink to={category.slug} key={category.id}>
-              <ServiceCategory>
-                <p>{category.categoryName}</p>
-              </ServiceCategory>
-            </StyledLink>
-          )
-        })}
+        {props.data.contentfulService.categories &&
+          props.data.contentfulService.categories.map(function(category) {
+            return (
+              <StyledLink to={category.slug} key={category.id}>
+                <ServiceCategory>
+                  <p>{category.categoryName}</p>
+                  <p>{category.services[1]}</p>
+                </ServiceCategory>
+              </StyledLink>
+            )
+          })}
       </ServicesContainer>
     </Container>
   )

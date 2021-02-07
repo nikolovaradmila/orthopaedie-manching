@@ -45,7 +45,7 @@ module.exports = {
         accessToken: "95AhLvoHBtTTgz_6Yg_b2WnP56Kw7kqtNQo19dxaU80",
       },
     },
-    {
+    /*  {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -59,6 +59,6 @@ module.exports = {
           },
         ],
       },
-    },
+    }, */
   ],
 }
