@@ -2,10 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Button from "@material-ui/core/Button"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import { useTheme } from "@material-ui/styles"
 
 const MainBanner = styled.div`
   min-height: 30vh !important;
